@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Psalm Sound Worship — Scripture Worship Music for All 150 Psalms</title>
+  <meta name="description" content="Experience worship music through all 150 Psalms. Long form scripture songs and compilation worship videos from Psalm Sound Worship ministry." />
+  <meta name="keywords" content="psalm worship music, scripture songs, christian worship, psalm 23 music, bible worship, psalm sound worship" />
+  <meta name="author" content="Psalm Sound Worship" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://psalmsoundworship.netlify.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Psalm Sound Worship — Scripture Worship Music" />
+  <meta property="og:description" content="Worship through all 150 Psalms. Long form scripture songs and compilation worship videos." />
+  <meta property="og:url" content="https://psalmsoundworship.netlify.app/" />
+  <meta property="og:site_name" content="Psalm Sound Worship" />
+  <meta property="og:image" content="https://ui-avatars.com/api/?name=Psalm+Sound&background=c9a84c&color=0a0e1a&size=512&bold=true" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Psalm Sound Worship — Scripture Worship Music" />
+  <meta name="twitter:description" content="Worship through all 150 Psalms. Long form scripture songs and compilation worship videos." />
+  <meta name="twitter:image" content="https://ui-avatars.com/api/?name=Psalm+Sound&background=c9a84c&color=0a0e1a&size=512&bold=true" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "Psalm Sound Worship",
+    "description": "Scripture worship music covering all 150 Psalms",
+    "url": "https://psalmsoundworship.netlify.app/",
+    "sameAs": ["https://www.youtube.com/@PsalmSoundWorship"],
+    "genre": "Christian Worship Music"
+  }
+  </script>
+  <meta name="theme-color" content="#c9a84c" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="PsalmSound" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #c9a84c; --gold-dim: rgba(201,168,76,0.15);
+      --navy: #0a0e1a; --navy-card: #141c2e;
+      --navy-border: rgba(201,168,76,0.2);
+      --text: #e8e0d0; --text-dim: #8a7f6e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--navy); color: var(--text); font-family: 'Crimson Text', Georgia, serif; font-size: 18px; min-height: 100vh; overflow-x: hidden; }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 20% 15%, rgba(201,168,76,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 80% 25%, rgba(255,255,255,0.2) 0%, transparent 100%),
+        radial-gradient(1px 1px at 45% 60%, rgba(201,168,76,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 75%, rgba(255,255,255,0.15) 0%, transparent 100%);
+      pointer-events: none; z-index: 0;
+    }
+
+    /* HEADER */
+    header { position: relative; text-align: center; padding: 3rem 1.5rem 2rem; border-bottom: 1px solid var(--navy-border); background: linear-gradient(180deg, rgba(201,168,76,0.06) 0%, transparent 100%); }
+    .logo-symbol { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--gold); margin-bottom: 0.5rem; text-shadow: 0 0 30px rgba(201,168,76,0.4); }
+    header h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 700; color: var(--gold); letter-spacing: 0.05em; }
+    header p { font-style: italic; color: var(--text-dim); font-size: 1rem; margin-top: 0.4rem; }
+    .gold-line { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 1rem auto; }
+
+    /* SUBSCRIBE */
+    .subscribe-btn { display: inline-flex; align-items: center; gap: 0.6rem; background: #ff0000; color: #fff; font-family: 'Crimson Text', serif; font-size: 1.1rem; font-weight: 600; padding: 0.7rem 1.6rem; border-radius: 4px; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s, transform 0.2s; box-shadow: 0 4px 16px rgba(255,0,0,0.3); }
+    .subscribe-btn:hover { background: #cc0000; transform: translateY(-2px); }
+    .subscribe-btn svg { width: 22px; height: 22px; fill: white; flex-shrink: 0; }
+    .mid-subscribe { max-width: 1200px; margin: 0 auto; padding: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; border-top: 1px solid var(--navy-border); border-bottom: 1px solid var(--navy-border); }
+    .mid-subscribe p { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--text); font-style: italic; }
+    .mid-subscribe p span { color: var(--gold); }
+
+    /* AI CHAT BOX — visible under header */
+    .ai-section {
+      max-width: 700px; margin: 0 auto;
+      padding: 1.5rem 1.5rem 0;
+    }
+    .ai-box {
+      background: var(--navy-card);
+      border: 1px solid var(--gold);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .ai-box-header {
+      background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05));
+      padding: 1rem 1.2rem;
+      border-bottom: 1px solid var(--navy-border);
+      display: flex; align-items: center; gap: 0.8rem;
+    }
+    .ai-box-header .ai-icon { font-size: 1.6rem; }
+    .ai-box-header h2 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--gold); }
+    .ai-box-header p { font-size: 0.85rem; color: var(--text-dim); font-style: italic; margin-top: 0.1rem; }
+    .ai-messages {
+      height: 220px; overflow-y: auto; padding: 1rem;
+      display: flex; flex-direction: column; gap: 0.7rem;
+      scroll-behavior: smooth;
+    }
+    .ai-messages::-webkit-scrollbar { width: 4px; }
+    .ai-messages::-webkit-scrollbar-thumb { background: var(--navy-border); border-radius: 2px; }
+    .ai-msg { max-width: 88%; padding: 0.65rem 0.9rem; border-radius: 8px; font-size: 0.95rem; line-height: 1.55; animation: fadeUp 0.3s ease; }
+    .ai-msg.user { background: var(--gold-dim); border: 1px solid var(--navy-border); align-self: flex-end; color: var(--text); }
+    .ai-msg.ai { background: rgba(255,255,255,0.04); border: 1px solid var(--navy-border); align-self: flex-start; color: var(--text); }
+    .ai-msg.thinking { color: var(--text-dim); font-style: italic; }
+    .ai-suggestions { padding: 0.5rem 1rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .ai-suggestion { background: none; border: 1px solid var(--navy-border); color: var(--text-dim); font-family: 'Crimson Text', serif; font-size: 0.85rem; padding: 0.3rem 0.8rem; border-radius: 20px; cursor: pointer; transition: border-color 0.2s, color 0.2s; white-space: nowrap; }
+    .ai-suggestion:hover { border-color: var(--gold); color: var(--gold); }
+    .ai-input-wrap { padding: 0.8rem 1rem; border-top: 1px solid var(--navy-border); display: flex; gap: 0.5rem; align-items: center; }
+    .ai-input { flex: 1; background: rgba(255,255,255,0.05); border: 1px solid var(--navy-border); color: var(--text); font-family: 'Crimson Text', serif; font-size: 1rem; padding: 0.65rem 0.9rem; border-radius: 6px; outline: none; transition: border-color 0.2s; }
+    .ai-input::placeholder { color: var(--text-dim); font-style: italic; }
+    .ai-input:focus { border-color: var(--gold); }
+    .ai-send { background: var(--gold); color: var(--navy); border: none; width: 42px; height: 42px; border-radius: 6px; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; transition: background 0.2s; flex-shrink: 0; font-weight: bold; }
+    .ai-send:hover { background: #e8c96a; }
+    .ai-send:disabled { background: var(--navy-border); cursor: not-allowed; }
+    .ai-disclaimer { padding: 0.4rem 1rem 0.6rem; font-size: 0.72rem; color: var(--text-dim); text-align: center; font-style: italic; }
+
+    /* SEARCH */
+    .search-wrap { padding: 1.2rem 1.5rem 0; max-width: 700px; margin: 0 auto; }
+    .search-box { width: 100%; background: var(--navy-card); border: 1px solid var(--navy-border); color: var(--text); font-family: 'Crimson Text', serif; font-size: 1.1rem; padding: 0.85rem 1.2rem; border-radius: 4px; outline: none; transition: border-color 0.3s; margin-top: 1.2rem; }
+    .search-box::placeholder { color: var(--text-dim); font-style: italic; }
+    .search-box:focus { border-color: var(--gold); box-shadow: 0 0 0 2px var(--gold-dim); }
+
+    .status { text-align: center; padding: 3rem 1rem; color: var(--text-dim); font-style: italic; }
+    .spinner { width: 36px; height: 36px; border: 2px solid var(--navy-border); border-top-color: var(--gold); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 1rem; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* FOLDERS */
+    .folder-section { max-width: 1200px; margin: 0 auto 3rem; padding: 0 1.5rem; }
+    .folder-header { display: flex; align-items: center; gap: 1rem; padding: 1.2rem 0; border-bottom: 1px solid var(--navy-border); margin-bottom: 1.5rem; cursor: pointer; user-select: none; }
+    .folder-icon { font-size: 1.5rem; }
+    .folder-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold); flex: 1; }
+    .folder-count { font-size: 0.85rem; color: var(--text-dim); font-style: italic; }
+    .folder-toggle { color: var(--gold); font-size: 1rem; transition: transform 0.3s; }
+    .folder-toggle.collapsed { transform: rotate(-90deg); }
+    .folder-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+    .folder-grid.collapsed { display: none; }
+
+    /* CARDS */
+    .video-card { background: var(--navy-card); border: 1px solid var(--navy-border); border-radius: 6px; overflow: hidden; cursor: pointer; transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s; animation: fadeUp 0.5s ease both; }
+    .video-card:hover { transform: translateY(-4px); border-color: var(--gold); box-shadow: 0 8px 32px rgba(201,168,76,0.12); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .thumb-wrap { position: relative; aspect-ratio: 16/9; overflow: hidden; background: #0d1220; }
+    .thumb-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+    .video-card:hover .thumb-wrap img { transform: scale(1.04); }
+    .play-btn { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(10,14,26,0.4); opacity: 0; transition: opacity 0.25s; }
+    .video-card:hover .play-btn { opacity: 1; }
+    .play-btn svg { width: 52px; height: 52px; fill: var(--gold); filter: drop-shadow(0 0 12px rgba(201,168,76,0.6)); }
+    .card-body { padding: 1rem 1.1rem 1.2rem; }
+    .card-title { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--text); line-height: 1.4; margin-bottom: 0.5rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .card-date { font-size: 0.82rem; color: var(--text-dim); }
+
+    /* MODAL */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(5,8,16,0.94); z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 1rem; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+    .modal-overlay.open { opacity: 1; pointer-events: all; }
+    .modal { background: var(--navy-card); border: 1px solid var(--navy-border); border-radius: 8px; width: 100%; max-width: 800px; overflow: hidden; transform: scale(0.96); transition: transform 0.3s; }
+    .modal-overlay.open .modal { transform: scale(1); }
+    .modal-video { aspect-ratio: 16/9; width: 100%; }
+    .modal-video iframe { width: 100%; height: 100%; border: none; display: block; }
+    .modal-info { padding: 1.2rem 1.4rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+    .modal-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--text); line-height: 1.4; }
+    .close-btn { background: none; border: 1px solid var(--navy-border); color: var(--text-dim); width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: border-color 0.2s, color 0.2s; }
+    .close-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .yt-link { display: inline-flex; align-items: center; gap: 0.5rem; margin: 0 1.4rem 1.2rem; background: none; border: 1px solid var(--navy-border); color: var(--text-dim); font-family: 'Crimson Text', serif; font-size: 0.95rem; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; text-decoration: none; transition: border-color 0.2s, color 0.2s; }
+    .yt-link:hover { border-color: #ff4444; color: #ff6666; }
+
+    /* FOOTER */
+    footer { text-align: center; padding: 2.5rem 1rem; border-top: 1px solid var(--navy-border); color: var(--text-dim); font-size: 0.9rem; }
+    footer p { margin-bottom: 1rem; font-style: italic; }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    .install-banner { position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%); background: var(--navy-card); border: 1px solid var(--gold); border-radius: 8px; padding: 0.9rem 1.4rem; display: flex; align-items: center; gap: 1rem; z-index: 500; box-shadow: 0 8px 32px rgba(0,0,0,0.6); max-width: 380px; width: calc(100% - 2rem); }
+    .install-banner p { font-size: 0.95rem; color: var(--text); flex: 1; margin: 0; font-style: normal; }
+    .install-btn { background: var(--gold); color: var(--navy); border: none; padding: 0.5rem 1rem; border-radius: 4px; font-family: 'Crimson Text', serif; font-size: 0.95rem; font-weight: 600; cursor: pointer; white-space: nowrap; }
+    .dismiss-btn { background: none; border: none; color: var(--text-dim); cursor: pointer; font-size: 1.1rem; }
+    .hidden { display: none !important; }
+
+    @media (max-width: 480px) {
+      .folder-grid { grid-template-columns: 1fr; }
+      header { padding: 2rem 1rem 1.5rem; }
+      .folder-section { padding: 0 1rem; }
+      .mid-subscribe { flex-direction: column; text-align: center; }
+      .ai-section { padding: 1rem 1rem 0; }
+      .search-wrap { padding: 1rem 1rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo-symbol">✦ ψ ✦</div>
+    <h1>Psalm Sound Worship</h1>
+    <div class="gold-line"></div>
+    <p>"Let everything that has breath praise the LORD"</p>
+    <br />
+    <a class="subscribe-btn" href="https://www.youtube.com/@PsalmSoundWorship?sub_confirmation=1" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+      Subscribe on YouTube
+    </a>
+  </header>
+
+  <!-- AI CHAT — visible immediately under header -->
+  <div class="ai-section">
+    <div class="ai-box">
+      <div class="ai-box-header">
+        <span class="ai-icon">📖</span>
+        <div>
+          <h2>Ask About the Psalms &amp; Bible</h2>
+          <p>Type your question below — available in English &amp; Spanish</p>
+        </div>
+      </div>
+      <div class="ai-messages" id="aiMessages">
+        <div class="ai-msg ai">Shalom! Ask me anything about the Psalms or the Bible. I answer in English or Spanish — whichever you write in. 🙏</div>
+      </div>
+      <div class="ai-suggestions" id="aiSuggestions">
+        <button class="ai-suggestion">What is Psalm 23 about?</button>
+        <button class="ai-suggestion">Who wrote the Psalms?</button>
+        <button class="ai-suggestion">What does Selah mean?</button>
+        <button class="ai-suggestion">¿Qué significa el Salmo 91?</button>
+      </div>
+      <div class="ai-input-wrap">
+        <input type="text" class="ai-input" id="aiInput" placeholder="Ask about any Psalm or Bible verse…" maxlength="300" />
+        <button class="ai-send" id="aiSend">➤</button>
+      </div>
+      <p class="ai-disclaimer">Responses may be used by Groq to improve AI. Not a substitute for pastoral guidance.</p>
+    </div>
+  </div>
+
+  <!-- SEARCH -->
+  <div class="search-wrap">
+    <input type="search" class="search-box" id="searchBox" placeholder="Search videos…" aria-label="Search videos" />
+  </div>
+
+  <main id="main">
+    <div class="status" id="status">
+      <div class="spinner"></div>
+      Loading psalms…
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>"Praise him with strings and pipe" — Psalm 150:4</p>
+    <a class="subscribe-btn" href="https://www.youtube.com/@PsalmSoundWorship?sub_confirmation=1" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+      Subscribe on YouTube
+    </a>
+    <p style="margin-top:1rem; font-size:0.8rem;">© 2026 Psalm Sound Worship Ministry</p>
+  </footer>
+
+  <!-- VIDEO MODAL -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true">
+    <div class="modal">
+      <div class="modal-video">
+        <iframe id="modalIframe" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="modal-info">
+        <p class="modal-title" id="modalTitle"></p>
+        <button class="close-btn" id="closeBtn" aria-label="Close">✕</button>
+      </div>
+      <a class="yt-link" id="ytLink" target="_blank" rel="noopener">▶ Watch on YouTube</a>
+    </div>
+  </div>
+
+  <!-- INSTALL BANNER -->
+  <div class="install-banner hidden" id="installBanner">
+    <p>Add Psalm Sound to your home screen</p>
+    <button class="install-btn" id="installBtn">Install</button>
+    <button class="dismiss-btn" id="dismissBtn">✕</button>
+  </div>
+
+  <script>
+    const YT_KEY   = 'AIzaSyBUBaRTS8__sSUGFM3YHOIBt6LzQMsbZEo';
+    const GROQ_KEY = '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';
+    const PLAYLISTS = [
+      { id: 'PLUFqRH8XIMuQIKYKVwv9EZCjtwwf5wiBd', label: 'Long Form Videos', icon: '🎵' },
+      { id: 'PLUFqRH8XIMuTOEbfco2d_D1zj1Ui3YGoS', label: 'Compilation Videos', icon: '📖' }
+    ];
+
+    let playlistData = {};
+    let chatHistory  = [];
+    let deferredPrompt = null;
+
+    // ── YOUTUBE ───────────────────────────────────────────────────
+    async function fetchPlaylist(id, token, acc) {
+      token = token || ''; acc = acc || [];
+      var url = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=' + id + '&maxResults=50&key=' + YT_KEY + (token ? '&pageToken=' + token : '');
+      var r = await fetch(url);
+      if (!r.ok) throw new Error('YouTube error ' + r.status);
+      var d = await r.json();
+      var valid = (d.items||[]).filter(function(v){ return v.snippet.resourceId && v.snippet.resourceId.videoId && v.snippet.title !== 'Private video' && v.snippet.title !== 'Deleted video'; });
+      var all = acc.concat(valid);
+      if (d.nextPageToken) return fetchPlaylist(id, d.nextPageToken, all);
+      return all;
+    }
+
+    function formatDate(iso){ return new Date(iso).toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'}); }
+
+    function buildCards(videos, container) {
+      container.innerHTML = '';
+      if (!videos.length) { container.innerHTML = '<p style="color:var(--text-dim);font-style:italic;padding:1rem 0;">No videos found.</p>'; return; }
+      videos.forEach(function(v, i) {
+        var vid = v.snippet.resourceId.videoId;
+        var title = v.snippet.title;
+        var thumb = (v.snippet.thumbnails.high || v.snippet.thumbnails.medium || v.snippet.thumbnails.default || {}).url || '';
+        var card = document.createElement('article');
+        card.className = 'video-card';
+        card.style.animationDelay = Math.min(i*0.04,0.6)+'s';
+        card.innerHTML = '<div class="thumb-wrap"><img src="'+thumb+'" alt="'+title.replace(/"/g,'&quot;')+'" loading="lazy"/><div class="play-btn"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="38" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="32,24 60,40 32,56"/></svg></div></div><div class="card-body"><h2 class="card-title">'+title+'</h2><p class="card-date">'+formatDate(v.snippet.publishedAt)+'</p></div>';
+        card.addEventListener('click', function(){ openModal(vid, title); });
+        container.appendChild(card);
+      });
+    }
+
+    function renderFolder(pl, videos, idx) {
+      var sec = document.createElement('section');
+      sec.className = 'folder-section'; sec.dataset.playlistIndex = idx;
+      var hdr = document.createElement('div'); hdr.className = 'folder-header';
+      hdr.innerHTML = '<span class="folder-icon">'+pl.icon+'</span><h2 class="folder-title">'+pl.label+'</h2><span class="folder-count" id="count-'+idx+'">'+videos.length+' video'+(videos.length!==1?'s':'')+'</span><span class="folder-toggle" id="toggle-'+idx+'">▼</span>';
+      var grid = document.createElement('div'); grid.className = 'folder-grid'; grid.id = 'grid-'+idx;
+      buildCards(videos, grid);
+      hdr.addEventListener('click', function(){ grid.classList.toggle('collapsed'); document.getElementById('toggle-'+idx).classList.toggle('collapsed'); });
+      sec.appendChild(hdr); sec.appendChild(grid);
+      return sec;
+    }
+
+    function createMidSubscribe() {
+      var d = document.createElement('div'); d.className = 'mid-subscribe';
+      d.innerHTML = '<p>Enjoying the worship? <span>Join our growing community.</span></p><a class="subscribe-btn" href="https://www.youtube.com/@PsalmSoundWorship?sub_confirmation=1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z" fill="white"/></svg>Subscribe on YouTube</a>';
+      return d;
+    }
+
+    document.getElementById('searchBox').addEventListener('input', function(e){
+      var q = e.target.value.toLowerCase().trim();
+      PLAYLISTS.forEach(function(pl,i){
+        var videos = playlistData[i]||[];
+        var filtered = q ? videos.filter(function(v){ return v.snippet.title.toLowerCase().includes(q); }) : videos;
+        var grid = document.getElementById('grid-'+i);
+        var cnt  = document.getElementById('count-'+i);
+        if (grid) buildCards(filtered, grid);
+        if (cnt)  cnt.textContent = filtered.length+' video'+(filtered.length!==1?'s':'');
+        if (grid && q) grid.classList.remove('collapsed');
+      });
+    });
+
+    function openModal(vid, title){
+      document.getElementById('modalIframe').src = 'https://www.youtube.com/embed/'+vid+'?autoplay=1';
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('ytLink').href = 'https://www.youtube.com/watch?v='+vid;
+      document.getElementById('modalOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(){
+      document.getElementById('modalOverlay').classList.remove('open');
+      document.getElementById('modalIframe').src = '';
+      document.body.style.overflow = '';
+    }
+    document.getElementById('closeBtn').addEventListener('click', closeModal);
+    document.getElementById('modalOverlay').addEventListener('click', function(e){ if(e.target===e.currentTarget) closeModal(); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+
+    // ── AI CHAT ───────────────────────────────────────────────────
+    var aiInput    = document.getElementById('aiInput');
+    var aiSend     = document.getElementById('aiSend');
+    var aiMessages = document.getElementById('aiMessages');
+
+    document.querySelectorAll('.ai-suggestion').forEach(function(btn){
+      btn.addEventListener('click', function(){ aiInput.value = btn.textContent; sendAI(); });
+    });
+    aiSend.addEventListener('click', sendAI);
+    aiInput.addEventListener('keydown', function(e){ if(e.key==='Enter') sendAI(); });
+
+    function addMsg(text, role){
+      var d = document.createElement('div');
+      d.className = 'ai-msg '+role; d.textContent = text;
+      aiMessages.appendChild(d);
+      aiMessages.scrollTop = aiMessages.scrollHeight;
+      return d;
+    }
+
+    async function sendAI(){
+      var text = aiInput.value.trim();
+      if (!text) return;
+      aiInput.value = ''; aiSend.disabled = true;
+      document.getElementById('aiSuggestions').style.display = 'none';
+      addMsg(text, 'user');
+      chatHistory.push({ role:'user', content: text });
+      var thinking = addMsg('Searching the scriptures…', 'ai thinking');
+      try {
+        var res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+          method: 'POST',
+          headers: { 'Content-Type':'application/json', 'Authorization':'Bearer '+GROQ_KEY },
+          body: JSON.stringify({
+            model: 'llama-3.1-8b-instant',
+            messages: [{
+              role: 'system',
+              content: 'You are a warm, reverent Bible guide specializing in the KJV Psalms and the entire Bible. Answer questions about scripture, meaning, context, and spiritual insight. Always quote KJV when referencing scripture. Respond in the same language the user writes in — English or Spanish. Keep answers clear, concise, and spiritually uplifting. Only answer Bible and faith-related questions.'
+            }].concat(chatHistory),
+            max_tokens: 500,
+            temperature: 0.7
+          })
+        });
+        var data = await res.json();
+        var reply = data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content;
+        if (!reply) throw new Error('No response');
+        thinking.remove();
+        addMsg(reply, 'ai');
+        chatHistory.push({ role:'assistant', content: reply });
+        if (chatHistory.length > 20) chatHistory = chatHistory.slice(-20);
+      } catch(err) {
+        thinking.remove();
+        addMsg('Sorry, I could not reach the scripture guide right now. Please try again.', 'ai');
+      }
+      aiSend.disabled = false;
+    }
+
+    // ── PWA ───────────────────────────────────────────────────────
+    window.addEventListener('beforeinstallprompt', function(e){ e.preventDefault(); deferredPrompt=e; document.getElementById('installBanner').classList.remove('hidden'); });
+    document.getElementById('installBtn').addEventListener('click', function(){ if(deferredPrompt){ deferredPrompt.prompt(); deferredPrompt.userChoice.then(function(){ document.getElementById('installBanner').classList.add('hidden'); deferredPrompt=null; }); } });
+    document.getElementById('dismissBtn').addEventListener('click', function(){ document.getElementById('installBanner').classList.add('hidden'); });
+    if ('serviceWorker' in navigator){ navigator.serviceWorker.register('/sw.js').catch(function(){}); }
+
+    // ── INIT ──────────────────────────────────────────────────────
+    (async function(){
+      var main   = document.getElementById('main');
+      var status = document.getElementById('status');
+      try {
+        var results = await Promise.all(PLAYLISTS.map(function(pl){ return fetchPlaylist(pl.id); }));
+        status.classList.add('hidden');
+        results.forEach(function(videos, i){
+          playlistData[i] = videos;
+          main.appendChild(renderFolder(PLAYLISTS[i], videos, i));
+          if (i===0) main.appendChild(createMidSubscribe());
+        });
+      } catch(err){
+        status.innerHTML = '<p style="color:#c46;">Could not load videos.</p><p style="margin-top:0.5rem;font-size:0.85rem;">'+err.message+'</p>';
+      }
+    })();
+  </script>
+</body>
+</html>
