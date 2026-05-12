@@ -1,6 +1,6 @@
 exports.handler = async function (event) {
   try {
-    const { messages } = JSON.parse(event.body);
+    const { messages } = JSON.parse(event.body || "{}");
 
     const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
@@ -10,7 +10,7 @@ exports.handler = async function (event) {
       },
       body: JSON.stringify({
         model: "llama-3.1-8b-instant",
-        messages: messages
+        messages: messages || []
       })
     });
 
@@ -19,17 +19,14 @@ exports.handler = async function (event) {
     return {
       statusCode: 200,
       body: JSON.stringify({
-        reply: data.choices?.[0]?.message?.content || "No response"
+        reply: data?.choices?.[0]?.message?.content || "No response"
       })
     };
 
-  } catch (error) {
+  } catch (e) {
     return {
       statusCode: 500,
-      body: JSON.stringify({
-        error: "Server error",
-        details: error.message
-      })
+      body: JSON.stringify({ error: e.message })
     };
   }
 };
