@@ -2,6 +2,13 @@ export async function handler(event) {
   try {
     const { messages } = JSON.parse(event.body || "{}");
 
+    if (!process.env.GROQ_API_KEY) {
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: "Missing GROQ_API_KEY" })
+      };
+    }
+
     const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -18,9 +25,7 @@ export async function handler(event) {
 
     return {
       statusCode: 200,
-      headers: {
-        "Content-Type": "application/json"
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         reply: data?.choices?.[0]?.message?.content || "No response"
       })
@@ -29,9 +34,7 @@ export async function handler(event) {
   } catch (err) {
     return {
       statusCode: 500,
-      headers: {
-        "Content-Type": "application/json"
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         error: "Server error",
         details: err.message
