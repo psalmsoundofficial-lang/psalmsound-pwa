@@ -1,8 +1,8 @@
 // YouTube key (safe if restricted)
 const YT_KEY = "YOUR_YOUTUBE_KEY_HERE";
 
-// Vercel backend URL
-const GROQ_API_URL = "https://psalmsound-pwa-z5rq.vercel.app/api/chat";
+// Vercel backend URL (your API route)
+const GROQ_API_URL = "/api/chat";
 
 // Chat history
 let chatHistory = [];
