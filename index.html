@@ -3,16 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Psalmsound AI</title>
+
+  <title>Psalm Sound Worship — Scripture Worship Music for All 150 Psalms</title>
+
+  <meta name="description" content="Experience worship music through all 150 Psalms. Long form scripture songs and compilation worship videos from Psalm Sound Worship ministry." />
+  <meta name="keywords" content="psalm worship music, scripture songs, christian worship, psalm 23 music, bible worship, psalm sound worship" />
+  <meta name="author" content="Psalm Sound Worship" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://psalmsoundworship.netlify.app/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Psalm Sound Worship — Scripture Worship Music" />
+  <meta property="og:description" content="Worship through all 150 Psalms. Long form scripture songs and compilation worship videos." />
+  <meta property="og:url" content="https://psalmsoundworship.netlify.app/" />
+  <meta property="og:site_name" content="Psalm Sound Worship" />
+  <meta property="og:image" content="https://psalmsoundworship.netlify.app/icon-512.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Psalm Sound Worship — Scripture Worship Music" />
+  <meta name="twitter:description" content="Worship through all 150 Psalms. Long form scripture songs and compilation worship videos." />
+  <meta name="twitter:image" content="https://psalmsoundworship.netlify.app/icon-512.png" />
+
+  <meta name="theme-color" content="#c9a84c" />
+
+  <link rel="manifest" href="manifest.json" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #c9a84c;
+      --navy: #0a0e1a;
+      --navy-card: #141c2e;
+      --text: #e8e0d0;
+      --text-dim: #8a7f6e;
+    }
+
+    body {
+      background: var(--navy);
+      color: var(--text);
+      font-family: 'Crimson Text', serif;
+      font-size: 18px;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+
+    .logo-symbol {
+      font-size: 2.5rem;
+      color: var(--gold);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold);
+    }
+
+    .subscribe-btn {
+      display: inline-flex;
+      gap: 0.5rem;
+      background: #ff0000;
+      color: white;
+      padding: 0.7rem 1.4rem;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Psalmsound AI</h1>
 
-  <textarea id="input" placeholder="Type your message..."></textarea>
-  <button id="send">Send</button>
+<header>
+  <div class="logo-symbol">✦ ψ ✦</div>
 
-  <pre id="output"></pre>
+  <h1>Psalm Sound Worship</h1>
 
-  <script src="script.js"></script>
+  <p>"Let everything that has breath praise the LORD"</p>
+
+  <br />
+
+  <a class="subscribe-btn"
+     href="https://www.youtube.com/@PsalmSoundWorship?sub_confirmation=1"
+     target="_blank">
+    Subscribe on YouTube
+  </a>
+</header>
+
+<script>
+/*
+==============================
+SECURE SETUP (IMPORTANT)
+==============================
+*/
+
+// YouTube key (safe to keep here if restricted in Google Console)
+const YT_KEY = "YOUR_YOUTUBE_KEY_HERE";
+
+// ⭐ UPDATED: Vercel backend URL
+const GROQ_API_URL = "https://psalmsound-pwa-z5rq.vercel.app/api/chat";
+
+/*
+AI FUNCTION (SAFE)
+*/
+async function sendAI() {
+
+  const text = aiInput.value.trim();
+  if (!text) return;
+
+  aiInput.value = "";
+  aiSend.disabled = true;
+
+  addMsg(text, "user");
+
+  chatHistory.push({ role: "user", content: text });
+
+  const thinking = addMsg("Searching the scriptures...", "ai");
+
+  try {
+
+    const res = await fetch(GROQ_API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ messages: chatHistory })
+    });
+
+    const data = await res.json();
+
+    thinking.remove();
+
+    const reply = data.reply || "No response available right now.";
+
+    addMsg(reply, "ai");
+
+    chatHistory.push({ role: "assistant", content: reply });
+
+  } catch (err) {
+
+    thinking.remove();
+
+    addMsg("Error connecting to scripture assistant.", "ai");
+  }
+
+  aiSend.disabled = false;
+}
+</script>
+
 </body>
 </html>
