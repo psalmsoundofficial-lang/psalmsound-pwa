@@ -4,14 +4,16 @@
 class ProviderError extends Error { constructor(code) { super(code); this.code = code; } }
 
 async function complete({ system, user, timeoutMs }) {
-  const key = process.env.GROQ_API_KEY_1 || process.env.GROQ_API_KEY;  const model = process.env.GROQ_MODEL || 'llama-3.3-70b-versatile';
+  const key = process.env.GROQ_API_KEY_1 || process.env.GROQ_API_KEY;
+  if (!key) throw new ProviderError('no_key');
+  const model = process.env.GROQ_MODEL || 'openai/gpt-oss-120b';
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), timeoutMs || 8000);
   try {
     const r = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
       headers: { Authorization: 'Bearer ' + key, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ model, temperature: 0.2, max_tokens: 450, messages: [{ role: 'system', content: system }, { role: 'user', content: user }] }),
+      body: JSON.stringify(Object.assign({ model, temperature: 0.2, max_tokens: 1500, messages: [{ role: 'system', content: system }, { role: 'user', content: user }] }, /^openai\/gpt-oss/.test(model) ? { reasoning_effort: 'low' } : {})),
       signal: ctrl.signal,
     });
     if (r.status === 429) throw new ProviderError('rate_limit');
