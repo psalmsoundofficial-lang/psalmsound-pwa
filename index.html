@@ -100,7 +100,7 @@
     }
     .ai-messages::-webkit-scrollbar { width: 4px; }
     .ai-messages::-webkit-scrollbar-thumb { background: var(--navy-border); border-radius: 2px; }
-    .ai-msg { max-width: 88%; padding: 0.65rem 0.9rem; border-radius: 8px; font-size: 0.95rem; line-height: 1.55; animation: fadeUp 0.3s ease; }
+    .ai-msg { max-width: 88%; padding: 0.65rem 0.9rem; border-radius: 8px; font-size: 0.95rem; line-height: 1.55; animation: fadeUp 0.3s ease; white-space: pre-wrap; }
     .ai-msg.user { background: var(--gold-dim); border: 1px solid var(--navy-border); align-self: flex-end; color: var(--text); }
     .ai-msg.ai { background: rgba(255,255,255,0.04); border: 1px solid var(--navy-border); align-self: flex-start; color: var(--text); }
     .ai-msg.thinking { color: var(--text-dim); font-style: italic; }
@@ -208,23 +208,23 @@
         <span class="ai-icon">📖</span>
         <div>
           <h2>Ask About the Psalms &amp; Bible</h2>
-          <p>Type your question below — available in English &amp; Spanish</p>
+          <p>Exact King James text with an explanation — questions in English or Spanish</p>
         </div>
       </div>
       <div class="ai-messages" id="aiMessages">
-        <div class="ai-msg ai">Shalom! Ask me anything about the Psalms or the Bible. I answer in English or Spanish — whichever you write in. 🙏</div>
+        <div class="ai-msg ai">Shalom! Include a Bible reference (like Psalm 23 or John 14:1-6) and I will show the exact King James text, then explain it. Scripture is shown in English (KJV); you may ask in English or Spanish. 🙏</div>
       </div>
       <div class="ai-suggestions" id="aiSuggestions">
         <button class="ai-suggestion">What is Psalm 23 about?</button>
-        <button class="ai-suggestion">Who wrote the Psalms?</button>
-        <button class="ai-suggestion">What does Selah mean?</button>
+        <button class="ai-suggestion">Explain John 14:1-6</button>
+        <button class="ai-suggestion">What does Psalm 91 say?</button>
         <button class="ai-suggestion">¿Qué significa el Salmo 91?</button>
       </div>
       <div class="ai-input-wrap">
-        <input type="text" class="ai-input" id="aiInput" placeholder="Ask about any Psalm or Bible verse…" maxlength="300" />
+        <input type="text" class="ai-input" id="aiInput" placeholder="Ask about a passage, e.g. Psalm 23 or John 14:1-6…" maxlength="300" />
         <button class="ai-send" id="aiSend">➤</button>
       </div>
-      <p class="ai-disclaimer">Responses may be used by Groq to improve AI. Not a substitute for pastoral guidance.</p>
+      <p class="ai-disclaimer">Scripture text is the King James Version. Explanations are AI-generated and may contain mistakes. Responses may be used by Groq to improve AI. Not a substitute for pastoral guidance.</p>
     </div>
   </div>
 
