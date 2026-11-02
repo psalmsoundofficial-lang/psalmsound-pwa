@@ -283,17 +283,35 @@
     let deferredPrompt = null;
 
     // ── YOUTUBE ───────────────────────────────────────────────────
-    async function fetchPlaylist(id, token, acc) {
-      token = token || ''; acc = acc || [];
-      var url = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=' + id + '&maxResults=50&key=' + YT_KEY + (token ? '&pageToken=' + token : '');
-      var r = await fetch(url);
-      if (!r.ok) throw new Error('YouTube error ' + r.status);
-      var d = await r.json();
-      var valid = (d.items||[]).filter(function(v){ return v.snippet.resourceId && v.snippet.resourceId.videoId && v.snippet.title !== 'Private video' && v.snippet.title !== 'Deleted video'; });
-      var all = acc.concat(valid);
-      if (d.nextPageToken) return fetchPlaylist(id, d.nextPageToken, all);
-      return all;
-    }
+async function fetchPlaylist(id, token, acc) {
+  token = token || '';
+  acc = acc || [];
+
+  var params = new URLSearchParams({ playlistId: id });
+  if (token) params.set('pageToken', token);
+
+  var url = '/.netlify/functions/youtube?' + params.toString();
+  var r = await fetch(url);
+
+  if (!r.ok) throw new Error('YouTube error ' + r.status);
+
+  var d = await r.json();
+
+  var valid = (d.items || []).filter(function(v) {
+    return v.snippet.resourceId &&
+      v.snippet.resourceId.videoId &&
+      v.snippet.title !== 'Private video' &&
+      v.snippet.title !== 'Deleted video';
+  });
+
+  var all = acc.concat(valid);
+
+  if (d.nextPageToken) {
+    return fetchPlaylist(id, d.nextPageToken, all);
+  }
+
+  return all;
+}
 
     function formatDate(iso){ return new Date(iso).toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'}); }
 
