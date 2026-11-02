@@ -94,8 +94,7 @@ function createHandler(deps) {
       if (v.ok) return reply(withNote(scripture + '\n\n' + S.explain + '\n' + answer));
       console.error('explanation rejected:', v.reason);
       failure = 'rejected';
-      user += '\n\nYour previous answer was rejected (' + v.reason + '). Rewrite it: use double quotation marks only for words copied exactly from the passage, cite no other verses, and include no Hebrew, Greek, dates or history.';
-    }
+user += '\n\nYour previous answer was rejected (' + v.reason + '). Rewrite it: use no quotation marks at all, cite no other verses, and include no Hebrew, Greek, dates or history.';    }
     return reply(withNote((failure === 'rejected' ? S.aiRejected : S.aiLimit) + '\n\n' + scripture));
   };
 }
