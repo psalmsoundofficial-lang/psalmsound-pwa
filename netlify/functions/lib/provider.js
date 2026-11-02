@@ -4,8 +4,7 @@
 class ProviderError extends Error { constructor(code) { super(code); this.code = code; } }
 
 async function complete({ system, user, timeoutMs }) {
-const key = process.env.GROQ_API_KEY || process.env.GROQ_API_KEY_1;  if (!key) throw new ProviderError('no_key');
-  const model = process.env.GROQ_MODEL || 'llama-3.3-70b-versatile';
+  const key = process.env.GROQ_API_KEY_1 || process.env.GROQ_API_KEY;  const model = process.env.GROQ_MODEL || 'llama-3.3-70b-versatile';
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), timeoutMs || 8000);
   try {
